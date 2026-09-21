@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlessiMart - Seller Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="login.html">Login</a> |
+    <span id="userInfo"></span>
+    <a id="logoutLink" href="#" style="display:none">Logout</a>
+  </nav>
+
+  <h1>Seller Dashboard</h1>
+  <p>Sellers only. Add a product, or edit/delete your own products below.</p>
+
+  <h2>Add / Edit Product</h2>
+  <form id="productForm">
+    <input type="hidden" id="editId" value="">
+    <label>Title: <input type="text" id="title" required></label><br><br>
+    <label>Description:<br><textarea id="description" rows="3" cols="40"></textarea></label><br><br>
+    <label>Price: <input type="number" id="price" min="0" step="0.01" required></label><br><br>
+    <label>Stock: <input type="number" id="stock" min="0" step="1" value="10"></label><br><br>
+    <label>Category:
+      <select id="category">
+        <option>General</option>
+        <option>Electronics</option>
+        <option>Fashion</option>
+        <option>Books</option>
+        <option>Home</option>
+      </select>
+    </label><br><br>
+    <button type="submit" id="saveBtn">Add Product</button>
+    <button type="button" id="cancelBtn" style="display:none">Cancel Edit</button>
+  </form>
+  <p id="msg"></p>
+
+  <h2>My Products</h2>
+  <table border="1" cellpadding="6">
+    <thead><tr><th>ID</th><th>Title</th><th>Price</th><th>Stock</th><th>Category</th><th>Actions</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <h2>Received Orders</h2>
+  <p>Orders from buyers that contain your products. You can update the order status.</p>
+  <p id="salesMsg"></p>
+  <table border="1" cellpadding="6">
+    <thead><tr><th>Order</th><th>Buyer</th><th>Product x Qty</th><th>Status</th><th>New Status</th></tr></thead>
+    <tbody id="salesRows"></tbody>
+  </table>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/seller.js"></script>
+</body>
+</html>

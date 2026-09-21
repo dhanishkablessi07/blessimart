@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlessiMart - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="register.html">Register</a> |
+    <span id="userInfo"></span>
+    <a id="logoutLink" href="#" style="display:none">Logout</a>
+  </nav>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label>Email: <input type="email" id="email" required></label><br><br>
+    <label>Password: <input type="password" id="password" required></label><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="msg"></p>
+  <p>No account? <a href="register.html">Register here</a></p>
+  <p>Admin demo: admin@blessimart.com / admin123</p>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

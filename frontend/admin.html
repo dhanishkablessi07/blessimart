@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlessiMart - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <span id="userInfo"></span>
+    <a id="logoutLink" href="#" style="display:none">Logout</a>
+  </nav>
+
+  <h1>Admin Panel</h1>
+  <p>Login as admin@blessimart.com / admin123</p>
+  <p id="msg"></p>
+
+  <h2>Users</h2>
+  <table border="1" cellpadding="6">
+    <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th></tr></thead>
+    <tbody id="userRows"></tbody>
+  </table>
+
+  <h2>All Orders</h2>
+  <table border="1" cellpadding="6">
+    <thead><tr><th>Order</th><th>Buyer</th><th>Total</th><th>Status</th></tr></thead>
+    <tbody id="orderRows"></tbody>
+  </table>
+
+  <h2>Remove Product</h2>
+  <label>Product ID: <input type="number" id="delId" min="1"></label>
+  <button id="delBtn">Delete Product</button>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

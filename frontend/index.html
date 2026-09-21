@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlessiMart - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="seller.html">Seller</a> |
+    <a href="cart.html">Cart</a> |
+    <a href="orders.html">Orders</a> |
+    <a href="admin.html">Admin</a> |
+    <a href="login.html">Login</a> |
+    <a href="register.html">Register</a> |
+    <span id="userInfo"></span>
+    <a id="logoutLink" href="#" style="display:none">Logout</a>
+  </nav>
+
+  <h1>BlessiMart</h1>
+
+  <div>
+    <input type="text" id="search" placeholder="Search products...">
+    <select id="category">
+      <option value="All">All categories</option>
+      <option value="General">General</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Books">Books</option>
+      <option value="Home">Home</option>
+    </select>
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <p id="msg"></p>
+  <div id="grid" class="grid"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

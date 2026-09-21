@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlessiMart - Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="checkout.html">Checkout</a> |
+    <a href="orders.html">Orders</a> |
+    <span id="userInfo"></span>
+    <a id="logoutLink" href="#" style="display:none">Logout</a>
+  </nav>
+
+  <h1>Shopping Cart</h1>
+  <p id="msg"></p>
+  <table border="1" cellpadding="6">
+    <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Line Total</th><th>Action</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <h3 id="total"></h3>
+  <p><a href="checkout.html">Go to Checkout</a></p>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
